@@ -2,9 +2,10 @@
 
 @section('title','Product Category')
 @section('content')
-    @foreach($destocks as $k=>$v)
+    @foreach($stocks as $k=>$v)
+    @csrf
                     <div class="col-lg-4 col-sm-6"> 
-                                @include('test.productModal')
+                                @include('category.productModal')
                                  @csrf
                         <div class="single_product_item">
                                 <image src="/images/{{$v->path}} ">
@@ -28,10 +29,6 @@
                                     }
                     </script>                                      
     @endforeach
-    @if(session('message'))
-    <div class="alert alert-success">{{session('message')}}</div>
-    @else
-    <div class="alert alert-danger">{{session('message')}}</div>
-    @endif
+
 
 @endsection

@@ -16,13 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/destock','destockController@addStock');
-Route::post('/destock','destockController@postStock');
+Route::get('/addStock','stockController@addStock');
+Route::post('/addStock','stockController@postStock');
 
-Route::get('/InstockProduct','destockController@instock');
+Route::get('/stock','stockController@stock');
 
-Route::get('/makeupCategory','destockController@makeupCategory');
-Route::post('/makeupCategory','destockController@sale');
+Route::get('/makeupCategory','stockController@makeupCategory');
+Route::post('/makeupCategory','stockController@sale');
 
-Route::get('/soldProduct','destockController@soldProduct');
+Route::get('/order','stockController@order');
+Route::get('/instock','stockController@instock');
 

@@ -9,6 +9,10 @@
                                         </div>
                                     <div class="container">
                                         <div>
+                                            <label for="name"><b>Product id</b></label><br>
+                                            <input type="text" name="product_id"  placeholder="full name" value="{{$v->id}}">
+                                        </div>
+                                        <div>
                                             <label for="name"><b>Product name</b></label><br>
                                             <input type="text" name="name"  placeholder="full name" value="{{$v->name}}">
                                         </div>
@@ -18,7 +22,7 @@
                                         </div>
                                         <div>
                                             <label for="price"><b>Price</b></label><br>
-                                            <input type="float" name="sellprice"  placeholder="expense" required>
+                                            <input type="float" name="sellprice"  placeholder="price" value="{{$v->sellprice}}">
                                         </div>
                                         <div>
                                             <label for="date"><b>Sell date</b></label><br>

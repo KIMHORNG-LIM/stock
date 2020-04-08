@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="zxx">
+
 <head>
- <!-- Required meta tags -->
- <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <title>Stock Form</title>
-     <!-- Bootstrap CSS -->
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>@yield('title')</title>
+  <link rel="icon" href="img/favicon.png">
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- animate CSS -->
   <link rel="stylesheet" href="/css/animate.css">
+  <!-- owl carousel CSS -->
   <link rel="stylesheet" href="/css/owl.carousel.min.css">
+  <!-- nice select CSS -->
+  <link rel="stylesheet" href="/css/nice-select.css">
+  <!-- font awesome CSS -->
   <link rel="stylesheet" href="/css/all.css">
   <!-- flaticon CSS -->
   <link rel="stylesheet" href="/css/flaticon.css">
@@ -21,11 +24,14 @@
   <link rel="stylesheet" href="/css/magnific-popup.css">
   <!-- swiper CSS -->
   <link rel="stylesheet" href="/css/slick.css">
+  <link rel="stylesheet" href="/css/price_rangs.css">
   <!-- style CSS -->
   <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
   <!--::header part start::-->
+  
   <header class="main_menu home_menu">
     <div class="container">
         <div class="row align-items-center">
@@ -46,11 +52,11 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Stock
+                                    Shop
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                    <a class="dropdown-item" href="category.html"> stock category</a>
-                                    <a class="dropdown-item" href="single-product.html">stock details</a>
+                                    <a class="dropdown-item" href="category.html"> shop category</a>
+                                    <a class="dropdown-item" href="single-product.html">product details</a>
                                     
                                 </div>
                             </li>
@@ -63,7 +69,7 @@
                                     <a class="dropdown-item" href="login.html"> login</a>
                                     <a class="dropdown-item" href="tracking.html">tracking</a>
                                     <a class="dropdown-item" href="checkout.html">product checkout</a>
-                                    <a class="dropdown-item" href="cart.html">instock</a>
+                                    <a class="dropdown-item" href="cart.html">shopping cart</a>
                                     <a class="dropdown-item" href="confirmation.html">confirmation</a>
                                     <a class="dropdown-item" href="elements.html">elements</a>
                                 </div>
@@ -104,7 +110,7 @@
             </div>
         </div>
     </div>
-    <div class="search_input" id="search_input_box">
+   <!--  <div class="search_input" id="search_input_box">
         <div class="container ">
             <form class="d-flex justify-content-between search-inner">
                 <input type="text" class="form-control" id="search_input" placeholder="Search Here">
@@ -112,10 +118,9 @@
                 <span class="ti-close" id="close_search" title="Close Search"></span>
             </form>
         </div>
-    </div>
+    </div> -->
 </header>
   <!-- Header part end-->
-
 
   <!--================Home Banner Area =================-->
   <!-- breadcrumb start-->
@@ -125,50 +130,64 @@
         <div class="col-lg-8">
           <div class="breadcrumb_iner">
             <div class="breadcrumb_iner_item">
-              <h2>Instock Products</h2>
-              <p>Business<span>-</span>stock</p>
+              <h2>Producta Checkout</h2>
+              <p>Home <span>-</span>Sold Product</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+</section>
+  
+  <!-- breadcrumb start-->
+
+  <!--================Checkout Area =================-->
+  <section class="checkout_area padding_top">
+      <div class="billing_details">
+        <div class="row">
+          <div class="container">
+            <div class="order_box">
+            <table class="table table-borderless">
+            <h2>Instock products</h2>
+              <thead>
+                <tr>
+                 
+                  <th scope="col">Stock id</th>
+                  <th scope="col">Stock amount</th>
+                  <th scope="col" colspan="2">Product name</th>
+                  <th scope="col">Order id</th>
+                  <th scope="col">Order amount</th>
+                  <th scope="col">Instock amount</th>
+                </tr>
+              </thead>
+              
+              
+              @yield('content')
+               
+              </table>     
+                    <!-- <span>Profits</span> -->
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <!--================End Checkout Area =================-->
+
+  <footer class="footer_part">
+          <div class="col-lg-4">
+            <div class="footer_icon social_icon">
+              <ul class="list-unstyled">
+                <li><a href="#" class="single_social_icon"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" class="single_social_icon"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" class="single_social_icon"><i class="fas fa-globe"></i></a></li>
+                <li><a href="#" class="single_social_icon"><i class="fab fa-behance"></i></a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- breadcrumb start-->
-
-  <!--================Cart Area =================-->
-  <section class="cart_area padding_top">
-    <div class="container">
-      <div class="cart_inner">
-          <!--make change-->
-        <div class="table-responsive">
-            @yield('content')
-        <table class="table">
-              <tr class="bottom_button">
-                <td>
-                  <a class="btn_1" href="/addStock">Add Stock</a>
-                </td>
-                <td></td>
-                <td></td>
-                <td>
-                  <div class="cupon_text float-right">
-                    <a class="btn_1" href="#">Edit Stock</a>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table> 
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--================End Cart Area =================-->
-
-  <!--::footer_part start::-->
- 
+  </footer>
   <!--::footer_part end::-->
 
   <!-- jquery plugins here-->
@@ -199,7 +218,7 @@
   <script src="/js/stellar.js"></script>
   <script src="/js/price_rangs.js"></script>
   <!-- custom js -->
-  <script src="/js/custom.js"></script>
+  <script src="js/custom.js"></script>
 </body>
 
 </html>

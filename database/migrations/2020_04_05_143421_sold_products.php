@@ -13,12 +13,14 @@ class SoldProducts extends Migration
      */
     public function up()
     {
-        Schema::create('soldProducts', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->integer('amount');
+            $table->integer('order_amount');
             $table->float('price');
-            $table->string('date')->nullable();
+            $table->string('order_date')->nullable();
+            $table->unsignedBigInteger('stock_id');
+            $table->foreign('stock_id')->references('id')->on('stocks');
         });
     }
 

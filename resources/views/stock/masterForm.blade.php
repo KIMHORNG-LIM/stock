@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
  <!-- Required meta tags -->
  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,8 +12,11 @@
     <title>Stock Form</title>
      <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- animate CSS -->
   <link rel="stylesheet" href="/css/animate.css">
+  <!-- owl carousel CSS -->
   <link rel="stylesheet" href="/css/owl.carousel.min.css">
+  <!-- font awesome CSS -->
   <link rel="stylesheet" href="/css/all.css">
   <!-- flaticon CSS -->
   <link rel="stylesheet" href="/css/flaticon.css">
@@ -23,6 +27,25 @@
   <link rel="stylesheet" href="/css/slick.css">
   <!-- style CSS -->
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css"> 
+.navbar-brand img{
+  boder-radius:50%;
+}
+
+   #content{
+   	width: 70%;
+   	margin: 20px auto;
+   	border: 1px solid #cbcbcb;
+   } 
+   form{
+   	width: 80%;
+   	margin: 20px auto;
+   }
+   form div{
+   	margin-top: 5px;
+   }
+</style>
 </head>
 <body>
   <!--::header part start::-->
@@ -31,7 +54,7 @@
         <div class="row align-items-center">
             <div class="col-lg-12">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo"> </a>
+                    <a class="navbar-brand"  href="#" > <img src="/css/logo1.jpg" alt="logo" > </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -42,18 +65,18 @@
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">Home</a>
-                            </li>
+                            
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Stock
+                                    Shop
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                    <a class="dropdown-item" href="category.html"> stock category</a>
-                                    <a class="dropdown-item" href="single-product.html">stock details</a>
+                                    <a class="dropdown-item" href="category.html"> shop category</a>
+                                    <a class="dropdown-item" href="single-product.html">product details</a>
                                     
                                 </div>
-                            </li>
+                            
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_3"
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -63,11 +86,11 @@
                                     <a class="dropdown-item" href="login.html"> login</a>
                                     <a class="dropdown-item" href="tracking.html">tracking</a>
                                     <a class="dropdown-item" href="checkout.html">product checkout</a>
-                                    <a class="dropdown-item" href="cart.html">instock</a>
+                                    <a class="dropdown-item" href="cart.html">shopping cart</a>
                                     <a class="dropdown-item" href="confirmation.html">confirmation</a>
                                     <a class="dropdown-item" href="elements.html">elements</a>
                                 </div>
-                            </li>
+                            
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_2"
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -77,11 +100,11 @@
                                     <a class="dropdown-item" href="blog.html"> blog</a>
                                     <a class="dropdown-item" href="single-blog.html">Single blog</a>
                                 </div>
-                            </li>
+                            
                             
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
+                            
                         </ul>
                     </div>
                     <div class="hearer_icon d-flex">
@@ -104,20 +127,19 @@
             </div>
         </div>
     </div>
-    <div class="search_input" id="search_input_box">
+    <!-- <div class="search_input" id="search_input_box">
         <div class="container ">
             <form class="d-flex justify-content-between search-inner">
                 <input type="text" class="form-control" id="search_input" placeholder="Search Here">
                 <button type="submit" class="btn"></button>
                 <span class="ti-close" id="close_search" title="Close Search"></span>
             </form>
-        </div>
-    </div>
+        </div> 
+    </div>-->
 </header>
   <!-- Header part end-->
 
 
-  <!--================Home Banner Area =================-->
   <!-- breadcrumb start-->
   <section class="breadcrumb breadcrumb_bg">
     <div class="container">
@@ -125,8 +147,8 @@
         <div class="col-lg-8">
           <div class="breadcrumb_iner">
             <div class="breadcrumb_iner_item">
-              <h2>Instock Products</h2>
-              <p>Business<span>-</span>stock</p>
+              <h2 style="color:white">Tracking Order</h2>
+              <p style="color:white">Home <span>-</span> Tracking Order</p>
             </div>
           </div>
         </div>
@@ -135,71 +157,48 @@
   </section>
   <!-- breadcrumb start-->
 
-  <!--================Cart Area =================-->
-  <section class="cart_area padding_top">
+  <!--================Tracking Box Area =================-->
+  <section class="tracking_box_area padding_top">
     <div class="container">
-      <div class="cart_inner">
-          <!--make change-->
-        <div class="table-responsive">
-            @yield('content')
-        <table class="table">
-              <tr class="bottom_button">
-                <td>
-                  <a class="btn_1" href="/destock">Add Stock</a>
-                </td>
-                <td></td>
-                <td></td>
-                <td>
-                  <div class="cupon_text float-right">
-                    <a class="btn_1" href="#">Edit Stock</a>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table> 
+      <div class="row align-items-center">
+        <!-- <div class="col-lg-6">
+              <div class="reacking_box_text text-center h-100">
+                <h2>New to our Shop?</h2>
+                <p>There are advances being made in science and technology
+                  everyday, and a good example of this is the</p>
+                  <a href="#" class="btn_2">Create an Account</a>
+              </div>
+            </div> -->
+      <div class="col-lg-12">
+        @yield('content')
+      </div>
+          <div class="col-lg-4">
+          
+          </div>
         </div>
       </div>
     </div>
-  </section>
-  <!--================End Cart Area =================-->
+    <div class="col-lg-10">
+    <div class="cupon_text float-right">
+      <a class="btn_1" href="/stock">View Stock</a>
+    </div>
+    </div>
+  <footer>
+  <div class="footer_icon social_icon">
+              
+                <a href="#"><i class="fa fa-facebook-square"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                <a href="#"><i class="fa fa-twitter-square"></i></a>
+                <a href="#"><i class="fa fa-globe"></i></a>
+               
+              </ul>
+            </div>
+  </footer>
+  
 
-  <!--::footer_part start::-->
  
-  <!--::footer_part end::-->
-
-  <!-- jquery plugins here-->
-  <!-- jquery -->
-  <script src="/js/jquery-1.12.1.min.js"></script>
-  <!-- popper js -->
-  <script src="/js/popper.min.js"></script>
-  <!-- bootstrap js -->
-  <script src="/js/bootstrap.min.js"></script>
-  <!-- easing js -->
-  <script src="/js/jquery.magnific-popup.js"></script>
-  <!-- swiper js -->
-  <script src="/js/swiper.min.js"></script>
-  <!-- swiper js -->
-  <script src="/js/masonry.pkgd.js"></script>
-  <!-- particles js -->
-  <script src="/js/owl.carousel.min.js"></script>
-  <script src="/js/jquery.nice-select.min.js"></script>
-  <!-- slick js -->
-  <script src="/js/slick.min.js"></script>
-  <script src="/js/jquery.counterup.min.js"></script>
-  <script src="/js/waypoints.min.js"></script>
-  <script src="/js/contact.js"></script>
-  <script src="/js/jquery.ajaxchimp.min.js"></script>
-  <script src="/js/jquery.form.js"></script>
-  <script src="/js/jquery.validate.min.js"></script>
-  <script src="/js/mail-script.js"></script>
-  <script src="/js/stellar.js"></script>
-  <script src="/js/price_rangs.js"></script>
-  <!-- custom js -->
-  <script src="/js/custom.js"></script>
+  
 </body>
 
 </html>

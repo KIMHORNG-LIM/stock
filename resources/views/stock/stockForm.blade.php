@@ -1,4 +1,4 @@
-@extends('stock.masterStock')
+@extends('stock.masterForm')
 @section('title',"AddStock")
 
 <body> 

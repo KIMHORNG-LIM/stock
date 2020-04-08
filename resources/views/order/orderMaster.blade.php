@@ -148,15 +148,17 @@
           <div class="container">
             <div class="order_box">
             <table class="table table-borderless">
-            <h2>Sold products</h2>
+            <h2>Order products</h2>
               <thead>
                 <tr>
+                 
+                  <th scope="col">Stock id</th>
                   <th scope="col" colspan="2">Product</th>
+                  <th scope="col">Order id</th>  
                   <th scope="col">Amount</th>
-                  <th scope="col">Date</th>
-                  <th scope="col">Price</th>
-                  <th scope="col">Total price</th>
-                  
+                  <th scope="col">Order date</th>
+                  <th scope="col">Total Price</th>
+                  <th scope="col">Total Profits</th>
                 </tr>
               </thead>
               
@@ -171,7 +173,26 @@
     </div>
   </section>
   <!--================End Checkout Area =================-->
-
+<!-- product_list part start-->
+<section class="product_list best_seller">
+<div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="section_tittle text-center">
+                        <h2>Best Sellers <span>shop</span></h2>
+                    </div>
+                </div>
+            </div>
+    <div class="row align-items-center justify-content-between">
+        <div class="col-lg-12">
+            <div class="best_product_slider owl-carousel">
+            @yield('content')
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+    <!-- product_list part end-->
   <footer class="footer_part">
           <div class="col-lg-4">
             <div class="footer_icon social_icon">

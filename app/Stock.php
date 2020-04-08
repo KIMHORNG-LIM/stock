@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Destock extends Model
+class Stock extends Model
 {
-    //
     public $timestamps=false;
+   
 }
